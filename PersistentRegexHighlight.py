@@ -9,7 +9,6 @@ if VERSION > 3000:
     reloader = 'PersistentRegexHighlight.' + reloader
     from imp import reload
 
-
 # Make sure all dependencies are reloaded on upgrade
 if reloader in sys.modules:
     reload(sys.modules[reloader])

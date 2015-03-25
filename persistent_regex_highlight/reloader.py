@@ -21,6 +21,7 @@ else:
             reload_mods.append(mod)
 
 mods_load_order = [
+    '.scheduler',
     '.package_resources',
     '.color_scheme_manager',
     '.minimal_region_set',
@@ -31,4 +32,5 @@ mods_load_order = [
 for suffix in mods_load_order:
     mod = mod_prefix + suffix
     if mod in reload_mods:
+        #print("Reloading: %s" % mod)
         reload(sys.modules[mod])
